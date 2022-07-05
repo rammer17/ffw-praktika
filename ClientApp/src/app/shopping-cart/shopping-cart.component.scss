@@ -1,0 +1,16 @@
+:host::ng-deep {
+    .container-fluid {
+        background: cyan;
+        min-height: 1000px;
+    }
+    .img-container {
+        padding: 2px;
+    }
+    .img-container img {
+        aspect-ratio: 1/1;
+        width: 240px;
+    }
+    .delete-button {
+        cursor: pointer;
+    }
+}

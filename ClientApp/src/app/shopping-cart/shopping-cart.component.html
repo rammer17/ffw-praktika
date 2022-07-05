@@ -1,2 +1,59 @@
-<p>shopping-cart works!</p>
-<button type="button" class="btn btn-primary">Primary</button>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col text-center my-4">
+            <h2>Количка</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4 col-12">
+                <button
+                pButton
+                label="Продължете да пазарувате"
+                class="p-button-primary w-75"
+                routerLink="home"></button>
+            </div>
+            <div class="col-md-8 col-12">
+
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-8 col-12">
+                <div class="dino-wrapper bg-light d-flex justify-content-between p-3 flex-wrap">
+                    <div class="wrapper d-flex flex-wrap">
+                        <div class="img-container bg-dark">
+                            <img src="https://media.istockphoto.com/vectors/image-preview-icon-picture-placeholder-for-website-or-uiux-design-vector-id1222357475?k=20&m=1222357475&s=612x612&w=0&h=jPhUdbj_7nWHUp0dsKRf4DMGaHiC16kg_FSjRRGoZEI=" alt="">
+                        </div>
+                        <div class="info-container">
+                            dino information
+                        </div>
+                    </div>
+                    <div class="delete-button"
+                        (click)="removeItem()">
+                        <i class="pi pi-times"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12 mt-md-0 mt-4">
+                <div class="summary-wrapper d-flex flex-column bg-light px-3">
+                    <h3 class="my-3">Преглед на поръчката</h3>
+                    <div class="d-flex justify-content-between">
+                        <span>Междинна сума:</span>
+                        <span>Price</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span>Доставка:</span>
+                        <span>Price</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span>Крайна сума:</span>
+                        <span>Price</span>
+                    </div>
+                    <button
+                    pButton
+                    label="Купи"
+                    class="p-button-secondary my-3"
+                    (click)="checkout()"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

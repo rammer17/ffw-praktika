@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { DinoPreviewComponent } from './dino/dino-preview/dino-preview.component';
 import { HomeComponent } from './home/home.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
+import {ButtonModule} from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -14,11 +15,13 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
     HeaderComponent,
     DinoPreviewComponent,
     HomeComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ButtonModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
