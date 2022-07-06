@@ -10,7 +10,7 @@ export class DinoService {
             id: 1,
             title: 'Бронтозавър',
             description: 'Описание',
-            price: 1200
+            price: 1201
         }
     ];
 }

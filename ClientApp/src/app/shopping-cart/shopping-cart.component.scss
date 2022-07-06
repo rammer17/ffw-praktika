@@ -1,6 +1,6 @@
 :host::ng-deep {
     .container-fluid {
-        background: cyan;
+        background: var(--drop-down);
         min-height: 1000px;
     }
     .img-container {
@@ -12,5 +12,11 @@
     }
     .delete-button {
         cursor: pointer;
+    }
+    .p-button.p-button-secondary, .p-buttonset.p-button-secondary > .p-button, .p-splitbutton.p-button-secondary > .p-button {
+        background: var(--home);
+    }
+    .dino-wrapper {
+        background: var(--home);
     }
 }
