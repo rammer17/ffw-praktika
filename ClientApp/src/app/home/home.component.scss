@@ -3,5 +3,24 @@
         width: 100%;
         height: 100%;
         background: #abcc4c;
+        height: calc(100vh - 56px);
+        padding-top: 50px;
     }
+  }
+  p{
+    text-align: center;
+    font-size: 22px;
+    margin-top: 70px;
+  }
+  
+  h1{
+    text-align: center;
+    font-size: 46px;
+  }
+
+  img{
+    float: left;
+    margin-left: 40px;
+    margin-top: 50px;
+    box-shadow: 7px 10px 50px 1px black;
   }
