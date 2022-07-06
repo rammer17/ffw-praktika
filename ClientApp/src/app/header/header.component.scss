@@ -10,7 +10,6 @@
   padding: 16px;
   font-size: 16px;
   border: none;
-  border-radius: 10px;
 }
 
 .dropdown {
@@ -41,11 +40,6 @@
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-    transition: 0,2s;
-}
-.car{
-
+.asd{
+  background-image: "_images/car.png";
 }
