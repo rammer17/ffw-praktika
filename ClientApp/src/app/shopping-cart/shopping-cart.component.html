@@ -35,25 +35,22 @@
                             </div>
                         </div>
                     </div>
-                <div *ngIf="isCartEmpty"
-                    class="d-flex justify-content-center align-items-center h-100">
-                    <h1>Количката е празна</h1>
-                </div>
             </div>
-            <div class="col-md-4 col-12 mt-md-0 mt-4">
+            <div class="col-md-4 col-12 mt-md-0 mt-4"
+                *ngIf="!isCartEmpty">
                 <div class="summary-wrapper d-flex flex-column px-3">
                     <h3 class="my-3">Преглед на поръчката</h3>
                     <div class="d-flex justify-content-between">
                         <span>Междинна сума:</span>
-                        <span>Price</span>
+                        <span>{{ bill }}лв</span>
                     </div>
                     <div class="d-flex justify-content-between">
                         <span>Доставка:</span>
-                        <span>Price</span>
+                        <span>20лв</span>
                     </div>
                     <div class="d-flex justify-content-between">
                         <span>Крайна сума:</span>
-                        <span>Price</span>
+                        <span>{{ finalBill }}лв</span>
                     </div>
                     <button
                     pButton
@@ -61,6 +58,10 @@
                     class="p-button-secondary my-3"
                     (click)="checkout()"></button>
                 </div>
+            </div>
+            <div *ngIf="isCartEmpty"
+                class="col-12 d-flex justify-content-center align-items-center h-100">
+                <h1>Количката е празна</h1>
             </div>
         </div>
     </div>

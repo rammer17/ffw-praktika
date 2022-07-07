@@ -11,6 +11,8 @@ import { ShoppingCartService } from '../_services/shopping-cart.service';
 export class ShoppingCartComponent implements OnInit {
   cartItems?: any[] = undefined;
   isCartEmpty: boolean = true;
+  bill: number = 0;
+  finalBill: number = 0;
 
   constructor(private scService: ShoppingCartService,
               private messageService: MessageService,
@@ -26,6 +28,11 @@ export class ShoppingCartComponent implements OnInit {
     } else {
       this.isCartEmpty = true;
     }
+    this.cartItems.forEach(dino => {
+      this.bill += dino.price;
+      this.finalBill = this.bill + 20;
+    });
+    
   }
   checkout() {
     this.messageService.add({key: 'cart', severity: 'success', detail: 'Поръчката е направена успешно!'});
@@ -41,6 +48,9 @@ export class ShoppingCartComponent implements OnInit {
       this.isCartEmpty = true;
     }
   }
+
+
+
   ngOnDestroy() {
     this.isCartEmpty = true;
   }
