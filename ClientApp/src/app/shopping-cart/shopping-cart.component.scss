@@ -1,4 +1,7 @@
 :host::ng-deep {
+    * {
+        color: var(--text-light);
+    }
     .container-fluid {
         background: var(--drop-down);
         min-height: 1000px;
@@ -15,8 +18,21 @@
     }
     .p-button.p-button-secondary, .p-buttonset.p-button-secondary > .p-button, .p-splitbutton.p-button-secondary > .p-button {
         background: var(--home);
+        border: none;
+    }
+    .p-button-secondary:hover {
+        background: var(--home) !important;
+        opacity: 0.8;
+        
+    }
+    .p-button-secondary:hover > span,
+    i:hover {
+        color: white;
     }
     .dino-wrapper {
-        background: var(--home);
+        background: var(--drop-down-darker);
+    }
+    .summary-wrapper {
+        background: var(--drop-down-darker);
     }
 }
