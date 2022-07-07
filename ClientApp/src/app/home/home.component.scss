@@ -1,7 +1,12 @@
-:host::ng-deep {
-    .wrapper{
-        width: 100%;
-        height: 100%;
-        background: #abcc4c;
-    }
+:host::ng-deep { 
+  img {
+    box-shadow: 7px 10px 50px 1px black;
+    width: 90%;
   }
+  .container-fluid {
+    background: var(--home);
+  }
+  p {
+    font-size: 22px;
+  }
+}

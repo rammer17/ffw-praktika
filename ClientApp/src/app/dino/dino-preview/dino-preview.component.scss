@@ -1,0 +1,29 @@
+:host::ng-deep {
+    h1{
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+    }
+    p{
+        text-align: center;
+        font-size: 20px;
+        overflow: hidden;
+    }
+    img{
+        float: left;
+    }
+    .asd{
+        float: left;
+    }
+    .aa{
+        float:right;
+    }
+    .title {
+        cursor: pointer;
+    }
+    .container-fluid {
+        background-color: #ABCC4c;
+        min-height: 700px;
+    }
+}
