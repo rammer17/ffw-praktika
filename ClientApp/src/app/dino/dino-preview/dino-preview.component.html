@@ -1,13 +1,18 @@
 <div class="container-fluid">
     <div class="row">
-        <div class="col">
+        <div class="col mt-4">
             <h1 routerLink="home" class="title">Енциклопедия за динозаврите</h1>
-            <h2>{{ selectedDino?.title }}</h2>
+            <h2 class="mt-5">{{ selectedDino?.title }}</h2>
         </div>
     </div>  
-    <div class="row">
-        <div class="col-lg-6 col-12 d-flex align-items-center justify-content-center">
+    <div class="row d-flex align-items-center justify-content-center mt-5">
+        <div class="col-lg-6 col-12 d-flex align-items-center justify-content-center flex-column">
             <img [src]="selectedDino?.imgPath" width="450">
+            <button
+                    pButton
+                    label="Купи"
+                    class="p-button-secondary mt-4 "
+                    ></button>
         </div>
         <div class="col-lg-6 col-12">
             <p>

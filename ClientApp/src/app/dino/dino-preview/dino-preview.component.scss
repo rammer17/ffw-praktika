@@ -26,4 +26,8 @@
         background-color: #ABCC4c;
         min-height: 700px;
     }
+    .p-button.p-button-secondary, .p-buttonset.p-button-secondary > .p-button, .p-splitbutton.p-button-secondary > .p-button {
+        background: var(--drop-down);
+        
+    }
 }
