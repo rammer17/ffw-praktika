@@ -2,7 +2,9 @@
   <div class="dropdown">
     <button class="dropbtn">Хищници</button>
     <div class="dropdown-content">
-      <li>T-рекс</li>
+      <li
+        routerLink="dino-preview"
+        [queryParams]="{ id: 1}">T-рекс</li>
       <li>Алозавър</li>
       <li>Спинозавър</li>
     </div>
