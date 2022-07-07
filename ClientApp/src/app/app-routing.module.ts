@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'home', component:  HomeComponent },
   { path: 'dino-preview', component:  DinoPreviewComponent },
   { path: 'cart', component:  ShoppingCartComponent },
-  { path: '**', redirectTo: 'home', pathMatch: 'full' }
+  { path: '**', component:  HomeComponent }
 ];
 
 @NgModule({

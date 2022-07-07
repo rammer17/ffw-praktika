@@ -8,6 +8,10 @@ import { DinoPreviewComponent } from './dino/dino-preview/dino-preview.component
 import { HomeComponent } from './home/home.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import {ButtonModule} from 'primeng/button';
+import {ToastModule} from 'primeng/toast';
+import { RouterModule } from '@angular/router';
+import { MessageService } from 'primeng/api';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -19,11 +23,14 @@ import {ButtonModule} from 'primeng/button';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
-    ButtonModule
+    ButtonModule,
+    ToastModule,
+    RouterModule
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent, MessageService]
 })
 export class AppModule { }

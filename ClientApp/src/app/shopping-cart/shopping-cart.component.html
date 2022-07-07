@@ -17,19 +17,27 @@
         </div>
         <div class="row mt-3">
             <div class="col-md-8 col-12">
-                <div class="dino-wrapper d-flex justify-content-between p-3 flex-wrap">
-                    <div class="wrapper d-flex flex-wrap">
-                        <div class="img-container">
-                            <img src="https://media.istockphoto.com/vectors/image-preview-icon-picture-placeholder-for-website-or-uiux-design-vector-id1222357475?k=20&m=1222357475&s=612x612&w=0&h=jPhUdbj_7nWHUp0dsKRf4DMGaHiC16kg_FSjRRGoZEI=" alt="">
-                        </div>
-                        <div class="info-container">
-                            dino information
+                    <div *ngIf="!isCartEmpty"  class="item-wrapper">
+                        <div 
+                            *ngFor="let dino of cartItems; let i = index"
+                            class="dino-wrapper d-flex justify-content-between p-3 flex-wrap mb-3">
+                            <div class="wrapper d-flex flex-wrap">
+                                <div class="img-container">
+                                    <img [src]="dino.imgPath" alt="">
+                                </div>
+                                <div class="info-container ps-3 pt-3">
+                                    {{ dino.title }}
+                                </div>
+                            </div>
+                            <div class="delete-button"
+                                (click)="removeItem(i)">
+                                <i class="pi pi-times"></i>
+                            </div>
                         </div>
                     </div>
-                    <div class="delete-button"
-                        (click)="removeItem()">
-                        <i class="pi pi-times"></i>
-                    </div>
+                <div *ngIf="isCartEmpty"
+                    class="d-flex justify-content-center align-items-center h-100">
+                    <h1>Количката е празна</h1>
                 </div>
             </div>
             <div class="col-md-4 col-12 mt-md-0 mt-4">

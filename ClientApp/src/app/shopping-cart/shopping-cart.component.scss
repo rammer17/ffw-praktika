@@ -35,4 +35,11 @@
     .summary-wrapper {
         background: var(--drop-down-darker);
     }
+    .info-container {
+        font-size: 30px;
+    }
+    .item-wrapper {
+        overflow-y: scroll;
+        height: 400px;
+    }
 }

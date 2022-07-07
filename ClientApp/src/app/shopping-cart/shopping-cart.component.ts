@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { MessageService } from 'primeng/api';
 import { ShoppingCartService } from '../_services/shopping-cart.service';
 
 @Component({
@@ -7,21 +9,40 @@ import { ShoppingCartService } from '../_services/shopping-cart.service';
   styleUrls: ['./shopping-cart.component.scss']
 })
 export class ShoppingCartComponent implements OnInit {
-  cartItems: any[] = [];
+  cartItems?: any[] = undefined;
+  isCartEmpty: boolean = true;
 
-  constructor(private scService: ShoppingCartService) { }
+  constructor(private scService: ShoppingCartService,
+              private messageService: MessageService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.fetchCartItems();
   }
   fetchCartItems() {
     this.cartItems = this.scService.getCartItems();
+    if(this.cartItems.length) {
+      this.isCartEmpty = false;
+    } else {
+      this.isCartEmpty = true;
+    }
   }
   checkout() {
-    console.log("Order was made!")
+    this.messageService.add({key: 'cart', severity: 'success', detail: 'Поръчката е направена успешно!'});
+    this.isCartEmpty = true;
+    this.cartItems?.splice(0);
+    this.router.navigateByUrl('/home');
   }
-  removeItem() {
-    console.log("Item removed from cart!")
+  removeItem(index: number) {
+    this.cartItems?.splice(index, 1)
+    if(this.cartItems?.length) {
+      this.isCartEmpty = false;
+    } else {
+      this.isCartEmpty = true;
+    }
+  }
+  ngOnDestroy() {
+    this.isCartEmpty = true;
   }
 
 }

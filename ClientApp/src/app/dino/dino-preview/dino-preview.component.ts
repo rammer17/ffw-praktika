@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { VirtualTimeScheduler } from 'rxjs';
+import { MessageService } from 'primeng/api';
 import { IDino } from 'src/app/_models/dino.model';
 import { DinoService } from 'src/app/_services/dino.service';
+import { ShoppingCartService } from 'src/app/_services/shopping-cart.service';
 
 @Component({
   selector: 'app-dino-preview',
@@ -14,7 +15,9 @@ export class DinoPreviewComponent implements OnInit {
   selectedDino?: IDino;
 
   constructor(private route: ActivatedRoute,
-              private dinoService: DinoService) { }
+              private dinoService: DinoService,
+              private scService: ShoppingCartService,
+              private messageService: MessageService) { }
 
   ngOnInit(): void {
     this.fetchDinoId();
@@ -28,6 +31,10 @@ export class DinoPreviewComponent implements OnInit {
   }
   fetchDinoData() {
     this.selectedDino = this.dinoService.DinoList[this.selectedDinoId! - 1];
+  }
+  onAddToShoppingCart() {
+    this.messageService.add({key:'main', severity: 'success', detail: `Динозавърът е добавен успешно!`, life:2500});
+    this.scService.addToCart(this.selectedDino);
   }
 
 }
