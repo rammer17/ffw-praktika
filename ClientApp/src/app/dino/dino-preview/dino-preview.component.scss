@@ -5,11 +5,19 @@ h2{
     text-align: center;
 }
 p{
-    text-align: right;
+    text-align: center;
+    font-size: 20px;
 }
 img{
     float: left;
 }
 div{
     background-color: #ABCC4c;
+    height: calc(100vh - 56px);
+}
+.asd{
+    float: left;
+}
+.aa{
+    float:right;
 }
