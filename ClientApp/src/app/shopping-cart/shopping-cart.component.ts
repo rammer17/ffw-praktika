@@ -47,6 +47,10 @@ export class ShoppingCartComponent implements OnInit {
     } else {
       this.isCartEmpty = true;
     }
+    this.cartItems?.forEach(dino => {
+      this.bill += dino.price;
+      this.finalBill = this.bill + 20;
+    });
   }
 
 
