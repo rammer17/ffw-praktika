@@ -42,4 +42,10 @@
         overflow-y: scroll;
         height: 400px;
     }
+    @media (max-width: 768px) {
+        .p-button.p-button-secondary, .p-buttonset.p-button-secondary > .p-button, .p-splitbutton.p-button-secondary > .p-button {
+            width: 100% !important;
+            margin-left: 12px;
+        }
+    }
 }
