@@ -8,6 +8,7 @@ import { DinoPreviewComponent } from './dino/dino-preview/dino-preview.component
 import { HomeComponent } from './home/home.component';
 import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import {ButtonModule} from 'primeng/button';
+import {ImageModule} from 'primeng/image';
 import {ToastModule} from 'primeng/toast';
 import { RouterModule } from '@angular/router';
 import { MessageService } from 'primeng/api';
@@ -33,8 +34,8 @@ import { CartDetailsComponent } from './shopping-cart/cart-details/cart-details.
     AppRoutingModule,
     ButtonModule,
     ToastModule,
-    RouterModule
-
+    RouterModule,
+    ImageModule
   ],
   providers: [],
   bootstrap: [AppComponent, MessageService]
