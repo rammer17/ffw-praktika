@@ -12,6 +12,9 @@ import {ToastModule} from 'primeng/toast';
 import { RouterModule } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { OrderDetailsComponent } from './shopping-cart/order-details/order-details.component';
+import { OrderPreviewComponent } from './shopping-cart/order-preview/order-preview.component';
+import { CartDetailsComponent } from './shopping-cart/cart-details/cart-details.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     DinoPreviewComponent,
     HomeComponent,
     ShoppingCartComponent,
+    OrderDetailsComponent,
+    OrderPreviewComponent,
+    CartDetailsComponent,
   ],
   imports: [
     BrowserModule,

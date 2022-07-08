@@ -1,0 +1,51 @@
+:host::ng-deep {
+    * {
+        color: var(--text-light);
+    }
+    .container-fluid {
+        background: var(--drop-down);
+        min-height: 700px;
+    }
+    .img-container {
+        padding: 2px;
+    }
+    .img-container img {
+        aspect-ratio: 1/1;
+        width: 240px;
+    }
+    .delete-button {
+        cursor: pointer;
+    }
+    .p-button.p-button-secondary, .p-buttonset.p-button-secondary > .p-button, .p-splitbutton.p-button-secondary > .p-button {
+        background: var(--home);
+        border: none;
+    }
+    .p-button-secondary:hover {
+        background: var(--home) !important;
+        opacity: 0.8;
+        
+    }
+    .p-button-secondary:hover > span,
+    i:hover {
+        color: white;
+    }
+    .dino-wrapper {
+        background: var(--drop-down-darker);
+    }
+    .summary-wrapper {
+        background: var(--drop-down-darker);
+    }
+    .info-container {
+        font-size: 30px;
+    }
+    .item-wrapper {
+        overflow-y: scroll;
+        height: 400px;
+    }
+    @media (max-width: 768px) {
+        .p-button.p-button-secondary, .p-buttonset.p-button-secondary > .p-button, .p-splitbutton.p-button-secondary > .p-button {
+            width: 100% !important;
+            margin-left: 12px;
+        }
+    }
+}
